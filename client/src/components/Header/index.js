@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Container, Navbar, Nav, NavDropdown } from "react-bootstrap";
-import logo from "./components/logo.png";
+import logo from "../../assets/logo.png";
 
 const CustomNavbar = () => {
   return (
@@ -39,7 +39,7 @@ const CustomNavbar = () => {
 
         <NavDropdown title="Enrollment" id="nav-dropdown-enrollment" className="nav-dropdown">
           <div className="dropdown-items-container">
-            <NavDropdown.Item as={Link} to="#">
+            <NavDropdown.Item as={Link} to="/calendar">
               Schedule a Tour
             </NavDropdown.Item>
             <NavDropdown.Item as={Link} to="#">
