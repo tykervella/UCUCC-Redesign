@@ -1,103 +1,93 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Container, Modal } from "react-bootstrap";
-import Navbar from "react-bootstrap/Navbar";
-import Nav from "react-bootstrap/Nav";
-import NavDropdown from "react-bootstrap/NavDropdown";
+import { Container, Navbar, Nav, NavDropdown } from "react-bootstrap";
+import logo from "./components/logo.png";
 
 const CustomNavbar = () => {
-
-
   return (
-    <Container>
-      <Navbar
-        variant="dark"
-        expand="lg"
-        className="text-white mb-4 py-3 custom-navbar"
-        style={{ backgroundColor: "#000000" }}
-      >
-  
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse className="basic-navbar-nav">
-              <NavDropdown title="About Us" className="basic-nav-dropdown">
-                <NavDropdown.Item as={Link} to="#">
-                  General Information
-                </NavDropdown.Item>
+    <Navbar
+      variant="dark"
+      expand="lg"
+      className="text-white mb-4 py-3 mt-100"
+      id="custom-navbar"
+      style={{ backgroundColor: "#5271ff", color: "#ffffff" }}
+    >
+      <Navbar.Brand id="logo">
+        <Link to="/">
+          <img
+            src={logo}
+            alt="Logo"
+            style={{ width: "175px" }}
+          />
+        </Link>
+      </Navbar.Brand>
 
-                <NavDropdown.Item as={Link} to="#">
-                  Rates & Fees
-                </NavDropdown.Item>
+      <Container id="dropdown-titles">
+        <NavDropdown title="About Us" id="nav-dropdown-about-us" className="nav-dropdown" >
+          <div className="dropdown-items-container">
+            <NavDropdown.Item as={Link} to="#">
+              General Information
+            </NavDropdown.Item>
+            <NavDropdown.Item as={Link} to="#">
+              Rates & Fees
+            </NavDropdown.Item>
+            <NavDropdown.Item as={Link} to="#">
+              Careers
+            </NavDropdown.Item>
+          </div>
+        </NavDropdown>
 
-                <NavDropdown.Item as={Link} to="#">
-                  Careers
-                </NavDropdown.Item>
-              </NavDropdown>
-            </Navbar.Collapse>
+        <NavDropdown title="Enrollment" id="nav-dropdown-enrollment" className="nav-dropdown">
+          <div className="dropdown-items-container">
+            <NavDropdown.Item as={Link} to="#">
+              Schedule a Tour
+            </NavDropdown.Item>
+            <NavDropdown.Item as={Link} to="#">
+              Waitlist
+            </NavDropdown.Item>
+            <NavDropdown.Item as={Link} to="#">
+              Forms
+            </NavDropdown.Item>
+          </div>
+        </NavDropdown>
 
-            <Navbar.Collapse className="basic-navbar-nav">
-              <NavDropdown title="Enrollment" className="basic-nav-dropdown">
-                <NavDropdown.Item as={Link} to="#">
-                  Schedule a Tour
-                </NavDropdown.Item>
+        <NavDropdown title="Classrooms" id="nav-dropdown-classrooms" className="nav-dropdown">
+          <div className="dropdown-items-container">
+            <NavDropdown.Item as={Link} to="#">
+              Room 237
+            </NavDropdown.Item>
+            <NavDropdown.Item as={Link} to="#">
+              Room 241
+            </NavDropdown.Item>
+            <NavDropdown.Item as={Link} to="#">
+              Room 243
+            </NavDropdown.Item>
+            <NavDropdown.Item as={Link} to="#">
+              Room 341
+            </NavDropdown.Item>
+            <NavDropdown.Item as={Link} to="#">
+              Room 345
+            </NavDropdown.Item>
+          </div>
+        </NavDropdown>
 
-                <NavDropdown.Item as={Link} to="#">
-                  Waitlist 
-                </NavDropdown.Item>
-
-                <NavDropdown.Item as={Link} to="#">
-                  Forms
-                </NavDropdown.Item>
-              </NavDropdown>
-            </Navbar.Collapse>
-
-            <Navbar.Collapse className="basic-navbar-nav">
-              <NavDropdown title="Classrooms" className="basic-nav-dropdown">
-                <NavDropdown.Item as={Link} to="#">
-                  Room 237
-                </NavDropdown.Item>
-
-                <NavDropdown.Item as={Link} to="#">
-                  Room 241 
-                </NavDropdown.Item>
-
-                <NavDropdown.Item as={Link} to="#">
-                  Room 243
-                </NavDropdown.Item>
-
-                <NavDropdown.Item as={Link} to="#">
-                  Room 341
-                </NavDropdown.Item>
-
-                <NavDropdown.Item as={Link} to="#">
-                  Room 345
-                </NavDropdown.Item>
-              </NavDropdown>
-            </Navbar.Collapse>
-
-            <Navbar.Collapse className="basic-navbar-nav">
-              <NavDropdown title="Resources" className="basic-nav-dropdown">
-                <NavDropdown.Item as={Link} to="#">
-                  Menus
-                </NavDropdown.Item>
-
-                <NavDropdown.Item as={Link} to="#">
-                  Days Closed 
-                </NavDropdown.Item>
-
-                <NavDropdown.Item as={Link} to="#">
-                  FAQs
-                </NavDropdown.Item>
-
-                
-              </NavDropdown>
-            </Navbar.Collapse>
-          
-          
-      </Navbar>
-    </Container>
-
-    
+        <NavDropdown title="Resources" id="nav-dropdown-resources" className="nav-dropdown">
+          <div className="dropdown-items-container">
+            <NavDropdown.Item as={Link} to="#">
+              Menus
+            </NavDropdown.Item>
+            <NavDropdown.Item as={Link} to="#">
+              Days Closed
+            </NavDropdown.Item>
+            <NavDropdown.Item as={Link} to="#">
+              FAQs
+            </NavDropdown.Item>
+          </div>
+        </NavDropdown>
+      </Container>
+    </Navbar>
   );
 };
 
 export default CustomNavbar;
+
