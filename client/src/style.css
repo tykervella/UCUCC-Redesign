@@ -39,6 +39,13 @@
   margin-top: 10px;
   padding: 5px;
   border-radius: 15px;
+
+}
+
+
+  
+.dropdown-open .dropdown-items-container {
+    display: flex;
 }
 
 .nav-dropdown {
