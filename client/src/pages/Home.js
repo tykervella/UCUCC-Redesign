@@ -34,15 +34,15 @@ const Home = () => {
         <br />
 
         <Row style={{display:"flex", justifyContent: "space-between"}}>
-          <Col className="home-infobox">
+          <Col md = {4} className="home-infobox">
 
           </Col>
 
-          <Col className="home-infobox">
+          <Col md = {4} className="home-infobox">
 
           </Col>
 
-          <Col className="home-infobox">
+          <Col md = {4} className="home-infobox">
 
           </Col>
           
