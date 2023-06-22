@@ -1168,7 +1168,7 @@ label form [type='radio'] {
 }
 
 .container {
-  width: 85%;
+  width: 95%;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
@@ -1262,8 +1262,8 @@ label form [type='radio'] {
 [class*='col-'] {
   position: relative;
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  /* padding-right: 15px;
+  padding-left: 15px; */
 }
 
 .col-auto {
@@ -1506,8 +1506,7 @@ label form [type='radio'] {
   }
   .align-center-md {
     align-items: center;
-  }
-  .align-content-start-md {
+  }  .align-content-start-md {
     align-content: flex-start;
   }
   .align-content-stretch-md {
