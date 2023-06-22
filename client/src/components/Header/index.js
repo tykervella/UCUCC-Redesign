@@ -4,6 +4,8 @@ import { Container, Navbar, Nav, NavDropdown } from "react-bootstrap";
 import logo from "../../assets/logo.png";
 
 const CustomNavbar = () => {
+
+  
   return (
     <div>
       {/* <div style={{ backgroundColor: "#ffffff", height: "30px" }}></div> */}
@@ -14,6 +16,17 @@ const CustomNavbar = () => {
         id="custom-navbar"
         style={{ backgroundColor: "#5271ff", color: "#ffffff" }}
       >
+        {/* <Navbar.Brand id="logo">
+          <Link to="/">
+            <img
+              src={logo}
+              alt="Logo"
+              style={{ width: "175px" }}
+            />
+          </Link>
+        </Navbar.Brand> */}
+
+        <Container id="dropdown-titles">
         <Navbar.Brand id="logo">
           <Link to="/">
             <img
@@ -23,10 +36,11 @@ const CustomNavbar = () => {
             />
           </Link>
         </Navbar.Brand>
-
-        <Container id="dropdown-titles">
-          <NavDropdown title="About Us" id="nav-dropdown-about-us" className="nav-dropdown" >
-            <div className="dropdown-items-container">
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+        <Nav className="me-auto">
+          <NavDropdown title="About Us" id="basic-nav-dropdown nav-dropdown-about-us" className="nav-dropdown">
+            {/* <div className="dropdown-items-container"> */}
               <NavDropdown.Item as={Link} to="#">
                 General Information
               </NavDropdown.Item>
@@ -36,11 +50,11 @@ const CustomNavbar = () => {
               <NavDropdown.Item as={Link} to="#">
                 Careers
               </NavDropdown.Item>
-            </div>
+            {/* </div> */}
           </NavDropdown>
 
-          <NavDropdown title="Enrollment" id="nav-dropdown-enrollment" className="nav-dropdown">
-            <div className="dropdown-items-container">
+          <NavDropdown title="Enrollment" id="basic-nav-dropdown nav-dropdown-enrollment" className="nav-dropdown">
+            {/* <div className="dropdown-items-container"> */}
               <NavDropdown.Item as={Link} to="/calendar">
                 Schedule a Tour
               </NavDropdown.Item>
@@ -50,11 +64,11 @@ const CustomNavbar = () => {
               <NavDropdown.Item as={Link} to="#">
                 Forms
               </NavDropdown.Item>
-            </div>
+            {/* </div> */}
           </NavDropdown>
 
-          <NavDropdown title="Classrooms" id="nav-dropdown-classrooms" className="nav-dropdown">
-            <div className="dropdown-items-container">
+          <NavDropdown title="Classrooms" id="basic-nav-dropdown nav-dropdown-classrooms" className="nav-dropdown">
+            {/* <div className="dropdown-items-container"> */}
               <NavDropdown.Item as={Link} to="#">
                 Room 237
               </NavDropdown.Item>
@@ -70,11 +84,11 @@ const CustomNavbar = () => {
               <NavDropdown.Item as={Link} to="#">
                 Room 345
               </NavDropdown.Item>
-            </div>
+            {/* </div> */}
           </NavDropdown>
 
-          <NavDropdown title="Resources" id="nav-dropdown-resources" className="nav-dropdown">
-            <div className="dropdown-items-container">
+          <NavDropdown title="Resources" id="basic-nav-dropdown nav-dropdown-resources" className="nav-dropdown">
+            {/* <div className="dropdown-items-container"> */}
               <NavDropdown.Item as={Link} to="#">
                 Menus
               </NavDropdown.Item>
@@ -84,8 +98,13 @@ const CustomNavbar = () => {
               <NavDropdown.Item as={Link} to="#">
                 FAQs
               </NavDropdown.Item>
-            </div>
+            {/* </div> */}
           </NavDropdown>
+          </Nav>
+          <span id = "nav-right">
+            <button id = "donate-button">Donate</button>
+          </span>
+          </Navbar.Collapse>
         </Container>
       </Navbar>
     </div>
