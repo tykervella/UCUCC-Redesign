@@ -84,9 +84,29 @@
 }
 
 .home-infobox {
-    height: 250px; 
+    height: 300px; 
     background-color: #5271ff;
     width: 30%;
+    padding: 10px;
+    color: whitesmoke;
+    padding-top: 10px;
+    text-align: center;
+  }
+
+.home-infobox button{
+  background-color: #F9643F;
+  border: none;
+  padding: 3px;
+  width: 125px;
+  border-radius: 5px;
+  color: whitesmoke;
+}  
+
+.contact-block{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 #donate-button {
