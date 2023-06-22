@@ -1,6 +1,9 @@
 import React from 'react';
 import { Container, Row, Col, Spinner } from "react-bootstrap";
 import { useNavigate } from 'react-router-dom';
+import banner from "../assets/banner.jpg";
+import kidsPlaying from "../assets/kids-playing.jpg"
+
 
 
 const Home = () => {
@@ -14,27 +17,55 @@ const Home = () => {
 
   return (
     <main>
-      <Container>
-    
-    
-         
-            
+      <Container >
 
-            <Row className="float-right banner-section" style={{ height: "450px" }}>
-              {/* banner marketplace button */}
-              <div className="mr-2">
-              <div id="container" className="-ml-4 shadow-lg bg-[#4B957E] p-2 rounded-lg">
-                <div className="border-2 border-[#FFEC99] p-2.5 rounded">
-                  <button className="learn-more" onClick={handleClick}>
-                    <span className="circle" aria-hidden="true">
-                      <span className="icon arrow"></span>
-                    </span>
-                    <span className="button-text" id="schedule-tour-button">Schedule a tour</span>
-                  </button>
-                </div>
-              </div>
-              </div>
-            </Row>
+        <Row style={{display:"flex", justifyContent: "space-between"}}> 
+          <Col md={3} style={{ backgroundColor: "#F9643F", color: "whitesmoke", paddingTop: "10px", textAlign: "center" }}>
+            <h3 style={{textDecoration: "underline"}}>Welcome To</h3>
+            <h2> UCUCC </h2>
+            <h2> Child Care</h2>
+            <h2> Programs</h2>
+          </Col>
+          <Col md={9}>
+            <img src={kidsPlaying} alt="A group of kids play tug-o-war, all are laughing" style={{ width: "100%", height: "100%", align: "right" }}/>
+          </Col> 
+        </Row>
+
+        <br />
+
+        <Row style={{display:"flex", justifyContent: "space-between"}}>
+          <Col className="home-infobox">
+
+          </Col>
+
+          <Col className="home-infobox">
+
+          </Col>
+
+          <Col className="home-infobox">
+
+          </Col>
+          
+        </Row>
+
+        <br />
+
+        <Row className="banner-section" style={{display:"flex", justifyContent: "space-between"}}>
+          {/* banner schedule button */}
+          
+                <button className="learn-more" id="schedule-tour-button" onClick={handleClick}>
+                  {/* <span className="button-text" id="schedule-tour-button">Schedule a tour</span> */}
+                  Schedule a Tour
+                </button>
+
+          <Col className="banner-image" md={12}>
+            <img src={banner} alt="Three kids sit at a table having a snack" style={{ width: "100%", height: "auto", margin: "auto" }}/>
+          </Col>
+        </Row>
+
+       
+
+
     
       
 
