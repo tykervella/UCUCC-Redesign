@@ -1,86 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Mako&family=Open+Sans:wght@400;600;800&display=swap');
 
-.nav-link {
-  display: block;
-  padding: 0.5rem 1rem;
+:root {
+  /* colors */
+  /* Site header/footer/ Content blocks */
+  --red: #d34323;
+  /* For Page Headers */
+  --blue: #4468f4;
+  /* Call to Action Buttons: Donate, Schedule Tour */
+  --yellow: #Feb823;
+
+  /* border radius */
+  --bRadMajor: 25px;
+  --bRadMinor: 25px;
 }
 
-.navbar .dropdown:hover > .dropdown-menu {
-  display: block;
+h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  text-transform: capitalize;
+  font-size: 46px; 
 }
 
-/* #custom-navbar,
-#dropdown-titles {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  color: white;
-  align-items: flex-end;
-} */
-
-#logo {
-    /* position: absolute;
-    top: -20px;
-    left: 0px; */
-    margin-top:25px;
+h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 32px; 
 }
 
-.dropdown-menu {
-  margin-top: 0;
+h3 {
+  font-family: 'Mako', sans-serif;
+}
+
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 18px; 
 }
 
 #custom-navbar {
-    height: 87.5px;
-    position: relative; 
-}
-
-.dropdown-items-container {
-  display: flex !important;
-  flex-direction: column;
-  background-color: #ffffff;
-  border: 3px solid black;
-  margin-top: 10px;
-  padding: 15px;
-  border-radius: 15px;
-  position: absolute;
-  top: 65px; 
-  z-index: 9999; 
+  height: 125px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  background: linear-gradient(to bottom, whitesmoke 0% 27.5%, var(--blue) 27.5% 100%);
 }
 
 
-  
-.dropdown-open .dropdown-items-container {
-    display: flex;
+
+#logo-container {
+  margin-left: 1.25%;
+  height: 125px;
+  display: flex;
+  align-items: flex-end;
+  padding-top: 1.25%;
+
+}
+
+#logo-img {
+  height: 95%;
+}
+
+#nav-buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#dropdown-titles {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
 
 .nav-dropdown {
-  margin: 0px 20px;
+  font-family: 'Mako', sans-serif;
+  padding: 0 2.5%;
+  padding-top: 5%;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.nav-dropdown .nav-link{
+  font-size: 16px;
+  color: whitesmoke;
+  font-weight: 900px;
 }
 
 .nav-dropdown .dropdown-toggle {
-    color: whitesmoke; 
-  }
-  
-.banner-section {
-    position: relative;
-    padding: 0;
-}
-
-#schedule-tour-button {
-    position: absolute; 
-    bottom: 50px;
-    left: 50px;
-    background-color: #F9643F;
-    color: whitesmoke;
-    padding: 12.5px;
-    border: 3px solid whitesmoke;
-    border-radius: 15px;
-    font-size: x-large;
-    z-index: 9999; 
-}
-  
-#schedule-tour-button:hover {
-    background-color: #A1AFEF;
-    border-color: black;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 18px; 
 }
 
 .home-infobox {
@@ -109,11 +118,34 @@
   justify-content: center;
 }
 
-#donate-button {
-  background-color: #F9643F;
-  color: whitesmoke;
-  padding: 10px;
-  border: 3px solid whitesmoke;
-  border-radius: 15px;
-  z-index: 9999; 
+.btn {
+  display: inline-block;
+  background-color: var(--yellow);
+  font-family: 'Mako', sans-serif;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  height: 40px;
+  border-radius: var(--bRadMajor);
+  transition: color .15s ease-in-out, background-color var(--red) .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+
+
+
+
+@media (max-width: 968px) {
+  #custom-navbar {
+    height: auto;
+    background: var(--blue);
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #logo-img {
+    padding-top:0px;
+    height: 200px;
+  }
 }
