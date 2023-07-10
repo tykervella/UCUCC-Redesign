@@ -41,7 +41,7 @@ const Home = () => {
         <br />
 
         <Row style={{display:"flex", justifyContent: "space-between"}}>
-          <Col md = {3} className="home-infobox">
+          <Col md = {4} className="home-infobox">
           <LooksIcon fontSize = "large" style = {{margin: "5px"}}/>
                 <h3>Our Approach</h3>
                 <hr></hr>
@@ -49,7 +49,7 @@ const Home = () => {
                 <button>Read More</button>
           </Col>
 
-          <Col md = {3} className="home-infobox">
+          <Col md = {4} className="home-infobox">
             <MoodIcon fontSize = "large" style = {{margin: "5px"}}/>
           <h3>Our Children</h3>
                 <hr></hr>
@@ -57,7 +57,7 @@ const Home = () => {
                 <button>Read More</button>
           </Col>
 
-          <Col md = {3} className="home-infobox">
+          <Col md = {4} className="home-infobox">
             <ContactEmergencyOutlinedIcon fontSize = "large" style = {{margin: "5px"}}/>
           <h3>Contact Us</h3>
           <hr></hr>

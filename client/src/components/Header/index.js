@@ -10,102 +10,120 @@ const CustomNavbar = () => {
     setIsNavOpen(false);
   };
 
+  const handleDonation = () => {
+    const url = "https://www.nfggive.org/charity-list?query=UCUCC&page=1&sorted_by=relevance";
+    window.open(url, '_blank');
+  }
+
   return (
-    <div style={{ position: "sticky", top: 0, zIndex: 1 }}>
-      <Navbar
-        expand="lg"
-        id="custom-navbar"
-        expanded={isNavOpen}
-      >
-          
-        <Navbar.Brand id="logo">
-          <Link to="/">
-            <img
-              src={logo}
-              alt="Logo"
-              style={{ width: "175px" }}
-            />
+    <div id="custom-navbar">
+        <Navbar
+          expand="lg"
+          expanded={isNavOpen}
+        >
+          <Link to="/" id="logo-container">
+            <img src={logo} id="logo-img" alt="" />
           </Link>
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="me-auto">
-          <NavDropdown title="Our Center" id="basic-nav-dropdown nav-dropdown-about-us" className="nav-dropdown">
-            {/* <div className="dropdown-items-container"> */}
-              <NavDropdown.Item as={Link} to="/AboutUs">
-                About Us
-              </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/Calendar">
-                Calendar
-              </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/Menu">
-                Menu
-              </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/Testimonials">
-                Testimonials
-              </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/Contact">
-                Contact Us
-              </NavDropdown.Item>
-            {/* </div> */}
-          </NavDropdown>
 
-          <NavDropdown title="Enrollment" id="basic-nav-dropdown nav-dropdown-enrollment" className="nav-dropdown">
-            {/* <div className="dropdown-items-container"> */}
-              <NavDropdown.Item as={Link} to="/Enrollment">
-                Enrollment Process
-              </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/TuitionAndFees">
-                Tuition & Fees
-              </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/Tours">
-                Tours
-              </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/TuitionAssistance">
-                Tuition Assistance
-              </NavDropdown.Item>
-            {/* </div> */}
-          </NavDropdown>
+          <Container id="dropdown-titles">
+            <Navbar.Toggle
+              aria-controls="basic-navbar-nav"
+              onClick={() => setIsNavOpen(!isNavOpen)}
+            />
 
-          <NavDropdown title="Classes/Staff" id="basic-nav-dropdown nav-dropdown-classrooms" className="nav-dropdown">
-            {/* <div className="dropdown-items-container"> */}
-              <NavDropdown.Item as={Link} to="/Classrooms">
-                Classrooms
-              </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/Staff">
-                Meet Our Staff
-              </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/Wishlists">
-                Wishlists
-              </NavDropdown.Item>
-              
-            {/* </div> */}
-          </NavDropdown>
+            <Navbar.Collapse id="basic-navbar-nav">
+              <Nav className="me-auto">
+                <NavDropdown
+                  title="Our Center"
+                  id="nav-dropdown-about-us"
+                  className="nav-dropdown"
+                >
+                  <NavDropdown.Item as={Link} to="/about" onClick={handleNavClose}>
+                    About Us
+                  </NavDropdown.Item>
+                  <NavDropdown.Item as={Link} to="/calendar" onClick={handleNavClose}>
+                    Calendar
+                  </NavDropdown.Item>
+                  <NavDropdown.Item as={Link} to="/menu" onClick={handleNavClose}>
+                    Menu
+                  </NavDropdown.Item>
+                  <NavDropdown.Item as={Link} to="/testimonials" onClick={handleNavClose}>
+                    Family Testimonials
+                  </NavDropdown.Item>
+                  <NavDropdown.Item as={Link} to="/contact" onClick={handleNavClose}>
+                    Contact Us
+                  </NavDropdown.Item>
+                </NavDropdown>
 
-          <NavDropdown title="Resources/FAQ" id="basic-nav-dropdown nav-dropdown-resources" className="nav-dropdown">
-            {/* <div className="dropdown-items-container"> */}
-              <NavDropdown.Item as={Link} to="/Resources">
-                Resources
-              </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/FAQ">
-                FAQs
-              </NavDropdown.Item>
-            {/* </div> */}
-          </NavDropdown>
+                <NavDropdown
+                  title="Enrollment"
+                  id="nav-dropdown-enrollment"
+                  className="nav-dropdown"
+                >
+                  <NavDropdown.Item as={Link} to="/enrollment" onClick={handleNavClose}>
+                    Enrollment Process
+                  </NavDropdown.Item>
+                  <NavDropdown.Item as={Link} to="/tuition" onClick={handleNavClose}>
+                    Tuition Process
+                  </NavDropdown.Item>
+                  <NavDropdown.Item as={Link} to="/tours" onClick={handleNavClose}>
+                    Tours
+                  </NavDropdown.Item>
+                  <NavDropdown.Item as={Link} to="/tuition-assistance" onClick={handleNavClose}>
+                    Tuition Assistance
+                  </NavDropdown.Item>
+                </NavDropdown>
 
-          <Nav.Link>
-            {/* <div className="dropdown-items-container"> */}
-            Join Our Team
-          </Nav.Link>
-          </Nav>
-          <span id = "nav-right">
-            <button id = "donate-button">Donate</button>
-          </span>
+                <NavDropdown
+                  title="Classes & Staff"
+                  id="nav-dropdown-classes-and-staff"
+                  className="nav-dropdown"
+                >
+                  <NavDropdown.Item as={Link} to="/classrooms" onClick={handleNavClose}>
+                    Classrooms
+                  </NavDropdown.Item>
+                  <NavDropdown.Item as={Link} to="/staff" onClick={handleNavClose}>
+                    Meet our Staff
+                  </NavDropdown.Item>
+                  <NavDropdown.Item as={Link} to="/wishlist" onClick={handleNavClose}>
+                    Wishlist
+                  </NavDropdown.Item>
+                </NavDropdown>
 
-          </Navbar.Collapse>
-        </Container>
-      
-      </Navbar>
+                <NavDropdown
+                  title="Resources & Staff"
+                  id="nav-dropdown-resources"
+                  className="nav-dropdown"
+                >
+                  <NavDropdown.Item as={Link} to="/resources" onClick={handleNavClose}>
+                    External Resources
+                  </NavDropdown.Item>
+                  <NavDropdown.Item as={Link} to="/FAQs" onClick={handleNavClose}>
+                    FAQs
+                  </NavDropdown.Item>
+                </NavDropdown>
+
+                <NavDropdown
+                  title="Join Our Team"
+                  id="nav-dropdown-hiring"
+                  className="nav-dropdown"
+                >
+                  <NavDropdown.Item as={Link} to="/positions" onClick={handleNavClose}>
+                    Open Positions
+                  </NavDropdown.Item>
+                </NavDropdown>
+              </Nav>
+            </Navbar.Collapse>
+          </Container>
+        </Navbar>
+
+        <button 
+          id="donate-button"
+          onClick={handleDonation}
+        >
+          Donate
+        </button>
+
     </div>
   );
 };
