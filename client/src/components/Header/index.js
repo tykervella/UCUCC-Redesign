@@ -1,32 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Container, Navbar, Nav, NavDropdown } from "react-bootstrap";
-import logo from "../../assets/logo.png";
+import logo from '../../assets/logo.png'
 
 const CustomNavbar = () => {
+  const [isNavOpen, setIsNavOpen] = useState(false);
 
-  
+  const handleNavClose = () => {
+    setIsNavOpen(false);
+  };
+
   return (
-    <div>
-      {/* <div style={{ backgroundColor: "#ffffff", height: "30px" }}></div> */}
+    <div style={{ position: "sticky", top: 0, zIndex: 1 }}>
       <Navbar
-        variant="dark"
         expand="lg"
-        className="text-white mb-4 py-3 mt-100"
         id="custom-navbar"
-        style={{ backgroundColor: "#5271ff", color: "#ffffff" }}
+        expanded={isNavOpen}
       >
-        {/* <Navbar.Brand id="logo">
-          <Link to="/">
-            <img
-              src={logo}
-              alt="Logo"
-              style={{ width: "175px" }}
-            />
-          </Link>
-        </Navbar.Brand> */}
-
-        <Container id="dropdown-titles">
+          
         <Navbar.Brand id="logo">
           <Link to="/">
             <img
@@ -110,12 +101,13 @@ const CustomNavbar = () => {
           <span id = "nav-right">
             <button id = "donate-button">Donate</button>
           </span>
+
           </Navbar.Collapse>
         </Container>
+      
       </Navbar>
     </div>
   );
 };
 
 export default CustomNavbar;
-

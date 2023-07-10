@@ -28,7 +28,7 @@ const Home = () => {
         <Row style={{display:"flex", justifyContent: "space-between"}}> 
           <Col md={3} style={{ backgroundColor: "#F9643F", color: "whitesmoke", paddingTop: "10px", textAlign: "center" }}>
            
-            <h3 style={{textDecoration: "underline"}}>Welcome To</h3>
+            <h2 style={{textDecoration: "underline"}}>Welcome To</h2>
             <h2> UCUCC </h2>
             <h2> Child Care</h2>
             <h2> Programs</h2>
