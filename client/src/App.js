@@ -13,6 +13,21 @@ import Calendar from './pages/CalendarPage';
 import Login from './pages/Login';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import AboutUs from './pages/AboutUs';
+import Menu from './pages/Menu';
+import Testimonials from './pages/Testimonials';
+import Contact from './pages/Contact';
+import Enrollment from './pages/Enrollment'
+import TuitionAndFees from './pages/TuitionAndFees';
+import Tour from './pages/Tour';
+import TuitionAssistance from './pages/TuitionAssistance';
+import Classrooms from './pages/Classrooms';
+import Staff from './pages/Staff';
+import Wishlists from './pages/Wishlists';
+import Resources from './pages/Resources';
+import FAQ from './pages/FAQ';
+
+
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -53,10 +68,63 @@ function App() {
                 path="/login" 
                 element={<Login />} 
               />
+               <Route 
+                path="/AboutUs" 
+                element={<AboutUs/>} 
+              />
               <Route 
                 path="/calendar" 
                 element={<Calendar/>} 
               />
+              <Route 
+                path="/Menu" 
+                element={<Menu/>} 
+              />
+               <Route 
+                path="/Testimonals" 
+                element={<Testimonials/>} 
+              />
+               <Route 
+                path="/Contact" 
+                element={<Contact/>} 
+              />
+               <Route 
+                path="/Enrollment" 
+                element={<Enrollment/>} 
+              />
+               <Route 
+                path="/TuitionAndFees" 
+                element={<TuitionAndFees/>} 
+              />
+               <Route 
+                path="/Tour" 
+                element={<Tour/>} 
+              />
+               <Route 
+                path="/TuitionAssistance" 
+                element={<TuitionAssistance/>} 
+              />
+               <Route 
+                path="/Classrooms" 
+                element={<Classrooms/>} 
+              />
+               <Route 
+                path="/Staff" 
+                element={<Staff/>} 
+              />
+               <Route 
+                path="/Wishlists" 
+                element={<Wishlists/>} 
+              />
+               <Route 
+                path="/Resouces" 
+                element={<Resources/>} 
+              />
+              <Route 
+                path="/FAQ" 
+                element={<FAQ/>} 
+              />
+
              
             </Routes>
           </div>
