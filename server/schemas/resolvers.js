@@ -2,11 +2,24 @@ const { AuthenticationError } = require('apollo-server-express');
 const { User, Page } = require('../models');
 const { signToken } = require('../utils/auth');
 
+// Helper function to find a page by its route name
+async function findPagebyRoute(pageName) {
+  try {
+    const page = await Page.findOne({ pageName: pageName });
+    return page;
+  } catch (error) {
+    console.error(error); // It might be helpful to log the error for debugging.
+    throw new Error('Error finding Page');
+  }
+}
+
+
 const resolvers = {
   Query: {
     users: async () => {
       return User.find();
     },
+
     user: async (parent, { username }) => {
       return User.findOne({ username });
     },
@@ -33,7 +46,28 @@ const resolvers = {
 
       return { token, user };
     },
-   
+
+    updatePage: async (parent, {
+      pageName,
+      pageTitle,
+      pageText
+    }) => {
+      const page = await findPagebyRoute(pageName);
+      if (!page)  {
+        throw new Error('Deck not found');
+      }
+
+      page.pageTitle = pageTitle;
+      page.pageText = pageText;
+
+      try {
+        const updatedPage = await page.save();
+        return updatedPage;
+      } catch (error) {
+        console.error(error); // It might be helpful to log the error for debugging.
+        throw new Error('Error updating Page');
+      }
+    },
   },
 };
 

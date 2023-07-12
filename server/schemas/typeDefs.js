@@ -26,6 +26,11 @@ const typeDefs = gql`
 
   type Mutation {
     login(username: String!, password: String!): Auth
+    updatePage (
+      pageName: String!, 
+      pageTitle: String!, 
+      pageText: String!
+    ): Page
   }
 `;
 
