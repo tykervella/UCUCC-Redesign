@@ -81,7 +81,7 @@ function App() {
                 element={<Menu/>} 
               />
                <Route 
-                path="/Testimonals" 
+                path="/testimonials" 
                 element={<Testimonials/>} 
               />
                <Route 
@@ -93,15 +93,15 @@ function App() {
                 element={<Enrollment/>} 
               />
                <Route 
-                path="/TuitionAndFees" 
+                path="/tuition" 
                 element={<TuitionAndFees/>} 
               />
                <Route 
-                path="/Tour" 
+                path="/tours" 
                 element={<Tour/>} 
               />
                <Route 
-                path="/TuitionAssistance" 
+                path="/tuition-assistance" 
                 element={<TuitionAssistance/>} 
               />
                <Route 
@@ -113,15 +113,15 @@ function App() {
                 element={<Staff/>} 
               />
                <Route 
-                path="/Wishlists" 
+                path="/wishlist" 
                 element={<Wishlists/>} 
               />
                <Route 
-                path="/Resouces" 
+                path="/resources" 
                 element={<Resources/>} 
               />
               <Route 
-                path="/FAQ" 
+                path="/FAQs" 
                 element={<FAQ/>} 
               />
 

@@ -49,6 +49,8 @@ p {
   background: linear-gradient(to bottom, whitesmoke 0% 27.5%, var(--blue) 27.5% 100%);
 }
 
+
+
 #logo-container{
   margin-left: 1.25%
 }
@@ -68,20 +70,20 @@ p {
 .nav-dropdown {
   font-family: 'Mako', sans-serif;
   padding: 0 2.5%;
-  padding-top: 5%;
+  padding-top: 2.5%;
   text-transform: uppercase;
-  font-weight: 900;
+  font-size: 16px;
 }
 
 .nav-dropdown .nav-link, .nav-link-individual{
   font-size: 16px;
   color: whitesmoke;
-  font-weight: 900px;
+  font-weight: 400px;
 }
 
 .nav-dropdown .dropdown-toggle {
   font-family: 'Open Sans', sans-serif;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 18px; 
 }
 
@@ -119,8 +121,26 @@ p {
   padding: 10px;
   border: 1.5px solid whitesmoke;
   border-radius: var(--bRadMajor);
+  margin-bottom: 25px;
+  margin-right: 2.5%;
+
+}
+
+#procare-button {
+  background-color: #FFF;
+  color: black;
+  padding: 10px;
+  border: 1.5px solid whitesmoke;
+  border-radius: var(--bRadMajor);
   margin-bottom: 15px;
   margin-right: 2.5%;
+}
+
+.nav-buttons{
+  display: flex;
+  align-items: center;
+  
+
 }
 
 
