@@ -15,6 +15,11 @@ const CustomNavbar = () => {
     window.open(url, '_blank');
   }
 
+  const handleProCare = () => {
+    const url = "https://www.nfggive.org/charity-list?query=UCUCC&page=1&sorted_by=relevance";
+    window.open(url, '_blank');
+  }
+
   return (
     <div id="custom-navbar">
         <Navbar
@@ -112,17 +117,38 @@ const CustomNavbar = () => {
                     Open Positions
                   </NavDropdown.Item>
                 </NavDropdown>
+
+                
               </Nav>
+
+              {/* <div className = "nav-buttons">
+              <button 
+              id="procare-button"
+              onClick={handleProCare}
+              >
+              <span>my</span>procare
+              </button>
+
+            <button 
+              id="donate-button"
+              onClick={handleDonation}
+            >
+              Donate
+            </button>
+            </div> */}
+             
+
             </Navbar.Collapse>
           </Container>
         </Navbar>
-
+        
         <button 
-          id="donate-button"
-          onClick={handleDonation}
-        >
-          Donate
-        </button>
+              id="donate-button"
+              onClick={handleDonation}
+            >
+              Donate
+            </button>
+      
 
     </div>
   );
