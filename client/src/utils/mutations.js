@@ -1,64 +1,34 @@
 import { gql } from '@apollo/client';
 
 export const LOGIN_USER = gql`
-  mutation login($email: String!, $password: String!) {
-    login(email: $email, password: $password) {
-      token
-      user {
-        _id
-        username
-      }
-    }
-  }
-`;
-
-export const ADD_USER = gql`
-  mutation addUser($username: String!, $email: String!, $password: String!) {
-    addUser(username: $username, email: $email, password: $password) {
-      token
-      user {
-        _id
-        username
-      }
-    }
-  }
-`;
-
-export const ADD_THOUGHT = gql`
-  mutation addThought($thoughtText: String!, $thoughtAuthor: String!) {
-    addThought(thoughtText: $thoughtText, thoughtAuthor: $thoughtAuthor) {
-      _id
-      thoughtText
-      thoughtAuthor
-      createdAt
-      comments {
-        _id
-        commentText
-      }
-    }
-  }
-`;
-
-export const ADD_COMMENT = gql`
-  mutation addComment(
-    $thoughtId: ID!
-    $commentText: String!
-    $commentAuthor: String!
-  ) {
-    addComment(
-      thoughtId: $thoughtId
-      commentText: $commentText
-      commentAuthor: $commentAuthor
+  mutation login(
+    $email: String!, 
+    $password: String!
     ) {
-      _id
-      thoughtText
-      thoughtAuthor
-      createdAt
-      comments {
+    login(
+      email: $email, 
+      password: $password) {
+      token
+      user {
         _id
-        commentText
-        createdAt
+        username
       }
     }
   }
 `;
+
+export const UPDATE_PAGE = gql`
+mutation Mutation(
+  $pageName: String!, 
+  $pageTitle: String!, 
+  $pageText: String!) {
+  updatePage(
+    pageName: $pageName, 
+    pageTitle: $pageTitle, 
+    pageText: $pageText) {
+    pageName
+    pageText
+    pageTitle
+  }
+}`
+

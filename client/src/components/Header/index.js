@@ -38,7 +38,7 @@ const CustomNavbar = () => {
                   id="nav-dropdown-about-us"
                   className="nav-dropdown"
                 >
-                  <NavDropdown.Item as={Link} to="/about" onClick={handleNavClose}>
+                  <NavDropdown.Item as={Link} to="/AboutUs" onClick={handleNavClose}>
                     About Us
                   </NavDropdown.Item>
                   <NavDropdown.Item as={Link} to="/calendar" onClick={handleNavClose}>
